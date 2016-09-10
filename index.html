@@ -20,6 +20,7 @@
 			  background-size: cover;
 			  text-align: center;
 			  margin-bottom: 0 !important;
+			  padding: 150px;
 		  }
 	  		
 		  .jumbotron h1{
@@ -64,6 +65,69 @@
 			  text-align: center;
 			  color: #ddd;
 		  }
+		  .leftfloat{
+			  float:left;
+		  }
+		  #top-nav{
+			  width: 100%;
+			  height: 40px;
+			  background: #2B2B2B;
+			  color: #F6F6F6;
+			  font-family: helvetica, arial, sans-serif;
+			  text-decoration: none;
+			  text-transform: uppercase;
+			  font-size: 14px;
+			  position: absolute;
+			  z-index: 2;
+		  }
+		  .nav-element{
+			  
+			  padding: 10px 20px 9px 20px;
+			  border-bottom: 4px solid gray; 
+			  
+			  
+		  }
+		  .nav-element:hover{
+			  color: #DE1B1B;
+		  }
+		  
+		  .logobrand{
+			 	font-weight: bold;
+			  background: gray;
+		  }
+		  a,a:visited, a:hover, a:active{
+			  text-decoration: none;
+			  color: #ddd;
+			  
+		  }
+		  .navlink{
+			  color: gray;
+		  }
+		  .navlink:hover{
+		  	color:#DE1B1B; 
+		  }
+		  .nav-element:hover {
+			  border-bottom: 4px solid #DE1B1B; 
+			  color: black;
+			  cursor: pointer;
+			  
+		  }
+		  .logobrand a{
+			  color: white;
+			  
+		  }
+		  .emptydiv{
+			  height: 44px;
+			  position: absolute;
+			  width:100%;
+			  background: gray;
+			  z-index: 1;
+			  
+		  }
+		  .logobrand:hover{
+			
+			background:#DE1B1B;
+		  }
 	  </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -74,9 +138,32 @@
     <![endif]-->
   </head>
   <body>
+	  <div class="emptydiv"></div>
 	 
+	<nav id="top-nav">
+		<div class="nav-element leftfloat logobrand">
+			<a href="http://www.portfoliocreativeshin.github.io/">CreativeShin</a>
+		</div>
+		
+		<div class="nav-element leftfloat navlink">
+			<a href="http://www.staggeringbeauty.com/" target="_blank">Something Interesting</a>
+		</div>
+		
+		<div class="nav-element leftfloat navlink" >
+			<a href="http://mashable.com/" target="_blank">Blog</a>
+		</div>
+		
+		<div class="nav-element leftfloat navlink">
+			<a href="http://www.movenowthinklater.com/" target="_blank">The Illusion</a>
+		</div>
+		 
+		<div class="nav-element leftfloat navlink">
+			<a href="http://www.google.com" target="_blank">Good Old Fashioned Google</a>
+		</div>
+	</nav>
 	  
-	<div class="jumbotron jumbotron-fluid">
+	  
+	<div class="jumbotron jumbhttp://mashable.com/otron-fluid">
 		  <h1 class="display-3 ">CreativeShin</h1>
 		  <p class="lead">Web Developer | Artist | Explorer | Ninja</p>
 		  <hr class="m-y-2">
@@ -87,15 +174,7 @@
 	  </div>
 	  
 	  
-	  <nav class="navbar navbar-light bg-faded">
-		  <div class="nav navbar-nav">
-			<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-			<a class="nav-item nav-link" href="#">Portfolio</a>
-			<a class="nav-item nav-link" href="#">Pricing</a>
-			<a class="nav-item nav-link" href="#">Contact</a>
-			<a class="nav-item nav-link" href="#">About</a>
-		  </div>
-		</nav>
+	 
 	  	
 	  
 	  <div class="container">
