@@ -19,10 +19,12 @@
 		  }
 		  .jumbotron{
 			  background: url("https://s10.postimg.org/mcmp108vt/leaves.jpg") no-repeat;
+			  background: url("leaves.jpg") no-repeat;
 			  background-size: cover;
 			  text-align: center;
 			  margin-bottom: 0 !important;
 			  padding: 150px;
+			  opacity: 0;
 		  }
 	  		
 		  .jumbotron h1{
@@ -47,6 +49,7 @@
 		  .jumbotron .lead .btn:hover{
 			   background: white !important; 
 			  color: black !important;
+			  
 			  
 		  }
 		  .jumbotron .lead .btn:active{
@@ -145,6 +148,12 @@
 		  .stack{
 			  margin-left: 5px;
 		  }
+		  #videoload{
+			  position: absolute;
+			  z-index: -1000;
+			width: 100%;
+			 
+		  }
 		  
 		  
 	  </style>
@@ -182,7 +191,6 @@
 		
 	</nav>
 	  
-	  
 	<div class="jumbotron jumbhttp://mashable.com/otron-fluid">
 		  <h1 class="display-3 ">CreativeShin</h1>
 		  <p class="lead">Web Developer | Artist | Explorer | Ninja</p>
@@ -192,7 +200,10 @@
 			<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 		  </p>
 	  </div>
+	  <div>
+	  	<video id="videoload" src="vid.mp4" autoplay loop></video>
 	  
+	  </div>
 	  
 	 
 	  	
@@ -212,15 +223,17 @@
    
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+	  
 	
 	  
 	  <script type="text/javascript">
 		  $(document).ready(function(){
-			  
-				  
+			$(".jumbotron").animate({opacity : 1}, 1500);
+				
 			$(".logobrand").click(function(){
 					$(".navlink").fadeToggle();
 				});
+			 
 			 
 		});
 		  
