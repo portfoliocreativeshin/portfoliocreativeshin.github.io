@@ -42,6 +42,15 @@
 			  border: none;
 			  margin-top: 15px;
 			  border: solid 1px black;
+			  transition-property: background;
+    			transition-duration: 0.5s;
+			  -webkit-transition-property: background; 
+			  -webkit-transition-duration: 0.5s;
+			  -o-transition-property: background; 
+			  -o-transition-duration: 0.5s;
+			  -moz-transition-property: background; 
+			  -moz-transition-duration: 0.5s;
+    		
 			  
 			 
 			  
@@ -88,8 +97,17 @@
 		  .nav-element{
 			  
 			  padding: 10px 20px 9px 20px;
-			  border-bottom: 4px solid gray; 
-			  
+			  border-bottom: 4px solid gray;
+			  transition-property: border;
+    		  transition-duration: 1s;
+			  -webkit-transition-property: border; 
+			  -webkit-transition-duration: 1s; 
+			  -o-transition-property: border; 
+			  -o-transition-duration: 1s; 
+			  -moz-transition-property: border; 
+			  -moz-transition-duration: 1s; 
+    		
+				  
 			  
 		  }
 		  .nav-element:hover{
@@ -99,6 +117,7 @@
 		  .logobrand{
 			 	font-weight: bold;
 			  background: gray;
+			 
 		  }
 		  .nav-element:hover {
 			  border-bottom: 4px solid #DE1B1B; 
@@ -131,7 +150,17 @@
 		  }
 		  
 		 
-		  @media (max-width: 865px){
+	
+		  .stack{
+			  margin-left: 5px;
+		  }
+		  #videoload{
+			  position: absolute;
+			  z-index: -1000;
+			width: 100%;
+			 
+		  }
+		  	 @media (max-width: 865px){
 			  .leftfloat{
 				  clear: both;
 			  }
@@ -144,17 +173,13 @@
 			  .navlink:hover{
 				  border-bottom:1px solid #DE1B1B; 
 			  }
+				 
 		  }
-		  .stack{
-			  margin-left: 5px;
+		  @media(max-width: 768px){
+			  #mainheader{
+					 font-size: 50px;
+				 }
 		  }
-		  #videoload{
-			  position: absolute;
-			  z-index: -1000;
-			width: 100%;
-			 
-		  }
-		  
 		  
 	  </style>
 
@@ -191,15 +216,19 @@
 		
 	</nav>
 	  
-	<div class="jumbotron jumbhttp://mashable.com/otron-fluid">
-		  <h1 class="display-3 ">CreativeShin</h1>
+	<header class="jumbotron jumbhttp://mashable.com/otron-fluid">
+		<div class="container">
+			<div class="row">
+		  <h1 class="display-3 " id="mainheader">CreativeShin</h1>
 		  <p class="lead">Web Developer | Artist | Explorer | Ninja</p>
 		  <hr class="m-y-2">
 		  <p>I'm a Web Developer with proficiency in HTML5, CSS3, JavaScript, jQuery and Bootstrap. You can find my previous works below.</p>
 		  <p class="lead">
 			<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 		  </p>
-	  </div>
+				</div>
+		</div>
+	  </header>
 	  <div>
 	  	<video id="videoload" src="vid.mp4" autoplay loop></video>
 	  
@@ -236,6 +265,10 @@
 			 
 			 
 		});
+		  $(window).load(function() {
+  		// When the page has loaded
+			  $("body").fadeIn(2000);
+		  	});
 		  
 	  
 	  
